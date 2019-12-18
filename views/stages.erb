@@ -1,0 +1,13 @@
+<h1>Woodland Festival</h1>
+<h4>Stages</h4>
+<% if @stages.any? %>
+  <ul>
+    <% @stages.each do |stage| %>
+      <li><a href="/stage/<%= stage.id %>"><%= stage.name %></a></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are currently no stages to display.</p>
+<% end %>
+
+<a href="/create_stage">Add a new stage</a>
